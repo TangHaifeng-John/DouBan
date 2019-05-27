@@ -1,3 +1,4 @@
+import 'package:douban/MoviesPage.dart';
 import 'package:flutter/material.dart';
 
 void main() => runApp(MyApp());
@@ -84,6 +85,9 @@ class _MyHomePageState extends State<MyHomePage> {
         },
       ),
       body: PageView(
+
+          children: <Widget>[MoviesPage()],
+
 
 
       )
