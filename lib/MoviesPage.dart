@@ -17,32 +17,32 @@ class _MoviesPage extends State<MoviesPage> {
 
   @override
   Widget build(BuildContext context) {
-//    return new GridView.count(
-//      //滚动方向
-//      scrollDirection: Axis.vertical,
-//      //一行多少个
-//      crossAxisCount: 4,
-//      //条目宽高比
-//      childAspectRatio: 1,
-//      padding: const EdgeInsets.all(0.0),
-//      primary: false,
-//      //左右间隔
-//      crossAxisSpacing: 4.0,
-//      //上下间隔
-//      mainAxisSpacing: 5.0,
-//      children: _getListData(),
-//    );
-
-
-
-
-
-    return new ListView(
+    return new GridView.count(
       //滚动方向
       scrollDirection: Axis.vertical,
-
+      //一行多少个
+      crossAxisCount: 2,
+      //条目宽高比
+      childAspectRatio: 1,
+      padding: const EdgeInsets.all(0.0),
+      primary: false,
+      //左右间隔
+      crossAxisSpacing: 4.0,
+      //上下间隔
+      mainAxisSpacing: 5.0,
       children: _getListData(),
     );
+
+
+
+
+
+//    return new ListView(
+//      //滚动方向
+//      scrollDirection: Axis.vertical,
+//
+//      children: _getListData(),
+//    );
 
 
     return GridView.custom(
@@ -78,7 +78,7 @@ class _MoviesPage extends State<MoviesPage> {
       "type": "movie",
       "tag": '热门',
       "sort": "recommend",
-      "page_limit": 20,
+      "page_limit": 100,
       "page_start": 0
     });
     print(response.data);
@@ -88,9 +88,7 @@ class _MoviesPage extends State<MoviesPage> {
     });
 
 
-//    for(int i=0;i<100;i++){
-//      data.add("haifeng"+i.toString());
-//    }
+
   }
 
   Widget getItemWidget(String url) {
